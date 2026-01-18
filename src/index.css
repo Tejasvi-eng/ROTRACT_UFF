@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: white;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 2px solid #f8bbd0;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.nav-logo span {
+  font-weight: bold;
+  color: #e91e63;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links a:hover {
+  color: #e91e63;
+}
+
+.nav-donate {
+  background: #e91e63;
+  color: white !important;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(135deg, #e91e63, #f8bbd0);
+}
+
+.hero-overlay {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 80px;
+}
+
+.section.light {
+  background: #fdf2f6;
+}
+
+.event-preview {
+  display: flex;
+  gap: 20px;
+}
+
+.event-card {
+  background: white;
+  padding: 30px;
+  border-left: 4px solid #e91e63;
+}
+
+/* CTA */
+.cta {
+  padding: 60px;
+  background: #e91e63;
+  color: white;
+  text-align: center;
+}
+
+.cta-btn {
+  background: white;
+  color: #e91e63;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .event-preview {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+}
+/* Team Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.team-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.team-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  border: 3px solid #f8bbd0;
+}
+
+
+/* Achievements */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.achievement-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.achievement-img {
+  height: 150px;
+  background: #fce4ec;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+/* Events Page */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.event-card-lg {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.event-banner {
+  height: 160px;
+  background: #f8bbd0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.event-media {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.event-media span {
+  background: #e91e63;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
