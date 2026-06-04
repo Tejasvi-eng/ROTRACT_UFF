@@ -1,17 +1,23 @@
+/* =========================
+   GLOBAL
+========================= */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: white;
+  background: #ffffff;
   color: #333;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
   border-bottom: 2px solid #f8bbd0;
+  background: #fff;
 }
 
 .nav-logo {
@@ -33,6 +39,7 @@ body {
   margin-left: 25px;
   text-decoration: none;
   color: #333;
+  font-weight: 500;
 }
 
 .nav-links a:hover {
@@ -41,28 +48,73 @@ body {
 
 .nav-donate {
   background: #e91e63;
-  color: white !important;
+  color: #fff !important;
   padding: 6px 14px;
   border-radius: 4px;
 }
 
-/* HERO */
+/* =========================
+   HERO BANNER
+========================= */
 .hero {
+  position: relative;
   height: 90vh;
-  background: linear-gradient(135deg, #e91e63, #f8bbd0);
+  overflow: hidden;
 }
 
-.hero-overlay {
+.hero video {
+  width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  object-fit: cover;
+}
+
+/* overlay content */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+
+  background: rgba(0, 0, 0, 0.45);
+  text-align: center;
+  padding: 20px;
 }
 
-/* SECTIONS */
+.hero-content h1 {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  background: #ffffff;
+  color: #e91e63;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #e91e63;
+  color: #fff;
+}
+
+/* =========================
+   SECTIONS
+========================= */
 .section {
   padding: 60px 80px;
 }
@@ -71,48 +123,9 @@ body {
   background: #fdf2f6;
 }
 
-.event-preview {
-  display: flex;
-  gap: 20px;
-}
-
-.event-card {
-  background: white;
-  padding: 30px;
-  border-left: 4px solid #e91e63;
-}
-
-/* CTA */
-.cta {
-  padding: 60px;
-  background: #e91e63;
-  color: white;
-  text-align: center;
-}
-
-.cta-btn {
-  background: white;
-  color: #e91e63;
-  padding: 12px 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  .event-preview {
-    flex-direction: column;
-  }
-
-  .section {
-    padding: 40px 20px;
-  }
-}
-/* Team Section */
+/* =========================
+   TEAM SECTION
+========================= */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -121,7 +134,7 @@ body {
 }
 
 .team-card {
-  background: white;
+  background: #fff;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -137,29 +150,9 @@ body {
   border: 3px solid #f8bbd0;
 }
 
-
-/* Achievements */
-.achievement-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.achievement-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-.achievement-img {
-  height: 150px;
-  background: #fce4ec;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-/* Events Page */
+/* =========================
+   EVENTS PAGE
+========================= */
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -168,29 +161,85 @@ body {
 }
 
 .event-card-lg {
-  background: white;
+  background: #fff;
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-.event-banner {
-  height: 160px;
-  background: #f8bbd0;
+.event-banner-img {
+  width: 100%;
+  aspect-ratio: 2048 / 910;
+  object-fit: contain;
+  background: #000;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
-.event-media {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
+.event-card-lg h3 {
+  margin: 10px 0 6px;
 }
 
-.event-media span {
+.event-card-lg p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* =========================
+   CTA / FOOTER
+========================= */
+.cta {
+  padding: 60px;
+  background: #c2185b;
+  color: #fff;
+  text-align: center;
+}
+
+.cta-btn {
+  background: #fff;
+  color: #e91e63;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+}
+/* =========================
+   DONATION BUTTON GRID
+   ========================= */
+.donate-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.donate-btn {
   background: #e91e63;
   color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 12px;
+  text-align: center;
+  padding: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.donate-btn:hover {
+  background: #c2185b;
 }
