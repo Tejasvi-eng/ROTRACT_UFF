@@ -1,0 +1,126 @@
+/* Container layout: Clean and centered */
+.modern-donate-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  background-color: #fafafa;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+/* The main reactive card */
+.donate-interactive-card {
+  position: relative;
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  z-index: 1;
+}
+
+/* Hover effect: Lifts up and shadow expands */
+.donate-interactive-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+  position: relative;
+  z-index: 10;
+}
+
+.donate-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.donate-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 3rem;
+}
+
+/* Crazy & Reactive Button */
+.reactive-donate-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 200% 200%;
+  animation: liquidGradient 4s ease infinite;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+
+/* Button Hover State */
+.reactive-donate-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 20px 35px rgba(139, 92, 246, 0.6);
+  color: #ffffff;
+}
+
+/* Button Click State */
+.reactive-donate-btn:active {
+  transform: translateY(2px) scale(0.95);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
+
+/* Fluid Gradient Animation for the button */
+@keyframes liquidGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Decorative background glowing orbs to make it look highly customized */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.4;
+  animation: float 6s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 200px;
+  height: 200px;
+  background: #3b82f6;
+  top: -50px;
+  left: -50px;
+}
+
+.orb-2 {
+  width: 250px;
+  height: 250px;
+  background: #ec4899;
+  bottom: -80px;
+  right: -50px;
+  animation-delay: -3s;
+}
+
+/* Floating animation for the decorative orbs */
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, 30px); }
+  100% { transform: translate(0, 0); }
+}

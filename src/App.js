@@ -7,11 +7,14 @@ import Events from "./pages/Events";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 import JoinUs from "./pages/JoinUs";
+import Parakram from "./pages/Parakram";
+import WelcomePopup from "./pages/WelcomePopup";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <WelcomePopup />
 
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -20,6 +23,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/join-us" element={<JoinUs />} />
+        <Route path="/parakram" element={<Parakram />} />
       </Routes>
     </BrowserRouter>
   );

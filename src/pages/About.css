@@ -1,0 +1,266 @@
+/* Import Poppins Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Base Light Page Setup */
+.about-page-light {
+  background-color: #fafafa;
+  min-height: 100vh;
+  /* Apply the new font here */
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif; 
+  overflow: hidden;
+  position: relative;
+}
+
+/* ----------------------------- */
+/* BACKGROUND ORBS               */
+/* ----------------------------- */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  opacity: 0.3;
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.pink-orb-top {
+  width: 450px;
+  height: 450px;
+  background: #ff7eb3;
+  top: 5%;
+  right: -100px;
+}
+
+.pink-orb-bottom {
+  width: 500px;
+  height: 500px;
+  background: #ff758c;
+  bottom: 10%;
+  left: -150px;
+  animation-delay: -3s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 50px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ----------------------------- */
+/* ABOUT TEXT PANEL              */
+/* ----------------------------- */
+.reactive-about-section {
+  position: relative;
+  padding: 5rem 2rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 30px;
+  padding: 4rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.glass-panel h2 {
+  font-size: 2.5rem;
+  font-weight: 800; /* Extra bold for main headings */
+  color: #111827;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px; /* Tightens the text slightly for a modern look */
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.highlight-tag {
+  margin-top: 3rem;
+  font-size: 1.25rem !important;
+  font-weight: 500;
+  color: #ec4899 !important;
+  text-align: center !important;
+}
+
+.highlight-tag strong {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+/* ----------------------------- */
+/* TEAM SECTION                  */
+/* ----------------------------- */
+.reactive-team-section {
+  position: relative;
+  padding: 5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.header-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.reactive-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  perspective: 1500px;
+}
+
+/* ----------------------------- */
+/* 3D PROFILE CARDS              */
+/* ----------------------------- */
+.glass-profile-card {
+  display: block;
+  position: relative;
+  border-radius: 24px;
+  background: transparent;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fadeUpLight 0.8s ease-out backwards;
+}
+
+@keyframes fadeUpLight {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pink Flow Border */
+.glass-profile-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 27px;
+  background: linear-gradient(45deg, #ff758c, #ff7eb3, #ec4899, #ff758c);
+  background-size: 300%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: pinkFlow 4s linear infinite;
+}
+
+@keyframes pinkFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.glass-card-inner {
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.5s ease;
+}
+
+/* Photo Orientation Fixes applied here */
+.profile-image-wrapper {
+  position: relative;
+  aspect-ratio: 4 / 5; 
+  width: 100%;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%; 
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Profile Text Content */
+.profile-content {
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-role {
+  font-size: 0.85rem;
+  font-weight: 700; /* Bold */
+  color: #ec4899;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.profile-name {
+  font-size: 1.3rem;
+  font-weight: 600; /* Semi-bold */
+  color: #111827;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.3px;
+}
+
+.profile-tagline {
+  font-size: 0.95rem;
+  font-weight: 300; /* Light weight for descriptions makes it look very premium */
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ----------------------------- */
+/* CRAZY HOVER STATES            */
+/* ----------------------------- */
+
+.glass-profile-card:hover {
+  transform: translateY(-12px) rotateX(4deg) rotateY(-4deg);
+}
+
+.glass-profile-card:hover::before {
+  opacity: 1;
+}
+
+.glass-profile-card:hover .glass-card-inner {
+  box-shadow: 20px 30px 50px rgba(236, 72, 153, 0.15);
+}
+
+.glass-profile-card:hover .profile-img {
+  transform: scale(1.08);
+}
+
+.glass-profile-card:hover .profile-role {
+  color: #ff7eb3;
+}

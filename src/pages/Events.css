@@ -1,0 +1,179 @@
+/* Base Light Page Setup */
+.events-page-light {
+  background-color: #fafafa;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.reactive-events-section {
+  position: relative;
+  padding: 5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* ----------------------------- */
+/*       BACKGROUND ORBS         */
+/* ----------------------------- */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.3;
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.pink-orb-left {
+  width: 400px;
+  height: 400px;
+  background: #ff7eb3;
+  top: 10%;
+  left: -100px;
+}
+
+.pink-orb-right {
+  width: 500px;
+  height: 500px;
+  background: #ff758c;
+  bottom: 20%;
+  right: -150px;
+  animation-delay: -4s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 50px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ----------------------------- */
+/*       3D GLASS GRID           */
+/* ----------------------------- */
+.reactive-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 3rem;
+  perspective: 1500px;
+}
+
+/* ----------------------------- */
+/*       LIGHT REACTIVE CARDS    */
+/* ----------------------------- */
+.glass-card {
+  display: block;
+  position: relative;
+  border-radius: 24px;
+  background: transparent;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fadeUpLight 0.8s ease-out backwards;
+}
+
+@keyframes fadeUpLight {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Crazy Hover Animated Pink Border */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 27px;
+  background: linear-gradient(45deg, #ff758c, #ff7eb3, #ec4899, #ff758c);
+  background-size: 300%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: pinkFlow 4s linear infinite;
+}
+
+@keyframes pinkFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.glass-card-inner {
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.5s ease;
+}
+
+/* Image Setup */
+.glass-image-wrapper {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.glass-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Content Area */
+.glass-content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.glass-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.glass-description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+/* ----------------------------- */
+/*       CRAZY HOVER STATES      */
+/* ----------------------------- */
+
+/* 3D Tilt & Lift */
+.glass-card:hover {
+  transform: translateY(-12px) rotateX(4deg) rotateY(-4deg);
+}
+
+/* Activate the animated pink glowing border */
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+/* Strengthen the shadow */
+.glass-card:hover .glass-card-inner {
+  box-shadow: 20px 30px 50px rgba(236, 72, 153, 0.15);
+}
+
+/* Image zoom */
+.glass-card:hover .glass-img {
+  transform: scale(1.1);
+}
+
+/* Text Highlights */
+.glass-card:hover .glass-title {
+  color: #ec4899;
+}
