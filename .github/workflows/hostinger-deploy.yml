@@ -1,0 +1,39 @@
+name: Build React app for Hostinger
+
+on:
+  push:
+    branches:
+      - parakram-desktop-restore
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Add htaccess to build
+        run: cp public/.htaccess build/.htaccess
+
+      - name: Publish build folder to hostinger-deploy branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: hostinger-deploy
+          publish_dir: ./build
+          force_orphan: true
