@@ -21,52 +21,43 @@ function WelcomePopup() {
 
   return (
     <div className="popup-overlay" onClick={closePopup}>
-      <div
-        className="popup-card"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button className="popup-close" onClick={closePopup}>
+      <div className="popup-card" onClick={(e) => e.stopPropagation()}>
+        <button
+          type="button"
+          className="popup-close"
+          onClick={closePopup}
+          aria-label="Close popup"
+        >
           ×
         </button>
 
         <div className="popup-image-wrap">
           <img
             src={popupImage}
-            alt="Rotaract Club announcement"
+            alt="Parakram 2026 announcement"
             className="popup-image"
           />
         </div>
 
         <div className="popup-content">
-          <span className="popup-tag">Welcome</span>
+          <p className="popup-kicker">Rotaract Club of YCCE welcomes you</p>
 
-          <h2>Rotaract Club of YCCE</h2>
+          <h2>Join Parakram 2026</h2>
 
           <p>
-            Join a vibrant community of young leaders creating impact through
-            service, leadership, fellowship, and innovation.
+            Be a part of Rotaract District 3030’s grand awards ceremony — an
+            evening dedicated to honouring service, celebrating leadership, and
+            crowning impact.
           </p>
 
-          <div className="popup-actions">
-            <a
-              href="https://forms.gle/dfbDcVp2QZboSjNr6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="popup-btn primary"
-              onClick={closePopup}
-            >
-              Join Us
-            </a>
-
-            {/*
-            <button
-              className="popup-btn secondary"
-              onClick={closePopup}
-            >
-              Maybe Later
-            </button>
-            */}
-          </div>
+          <a
+            href="PASTE_REGISTRATION_LINK_HERE"
+            target="_blank"
+            rel="noreferrer"
+            className="popup-btn primary"
+          >
+            Register Now
+          </a>
         </div>
       </div>
     </div>

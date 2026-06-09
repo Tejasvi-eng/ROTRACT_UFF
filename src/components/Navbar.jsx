@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,12 +9,15 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
         <Link to="/" className="brand">
+          <img
+            src={logo}
+            alt="Rotaract YCCE logo"
+            className="brand-logo"
+          />
           <span className="brand-main">Rotaract YCCE</span>
         </Link>
 
-        {/* Mobile Menu Button */}
         <button
           className={`menu-toggle ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -24,12 +28,11 @@ export default function Navbar() {
           <span></span>
         </button>
 
-        {/* Navigation Links */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
             <Link
-              to="/Parakram"
-              className="parakram-link"
+              to="/parakram"
+              className="Parakram-link"
               onClick={() => setMenuOpen(false)}
             >
               Parakram

@@ -6,10 +6,10 @@ function Donate() {
   return (
     <>
       <HeroBanner
-        title="Helping Hands"
-        subtitle="Support Service • Support Change"
-        videoSrc="/videos/donate.mp4"
-      />
+  title="Helping Hands"
+  subtitle="Your contribution helps us create meaningful impact"
+  desktopVideo="/videos/donate-desktop.mp4"
+/>
 
       <section className="modern-donate-section">
         <div className="donate-interactive-card">

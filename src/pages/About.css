@@ -1,211 +1,538 @@
-/* Import Poppins Font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* Base Light Page Setup */
-.about-page-light {
-  background-color: #fafafa;
+.about-page-royal {
+  background-color: #fff8dc;
+  background-image:
+    radial-gradient(circle at 50% 0%, #f0e4cc 0%, transparent 80%),
+    radial-gradient(circle at 100% 100%, #d1bc94 0%, transparent 80%);
   min-height: 100vh;
-  /* Apply the new font here */
-  font-family: 'Poppins', system-ui, -apple-system, sans-serif; 
-  overflow: hidden;
+  font-family: "Cormorant Garamond", serif;
+  color: #2b1d14;
+  overflow-x: hidden;
   position: relative;
+  padding-bottom: 5rem;
 }
 
 /* ----------------------------- */
-/* BACKGROUND ORBS               */
+/* ABOUT INTRO SECTION           */
 /* ----------------------------- */
-.bg-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: 0;
-  opacity: 0.3;
-  animation: floatOrb 8s ease-in-out infinite;
-}
 
-.pink-orb-top {
-  width: 450px;
-  height: 450px;
-  background: #ff7eb3;
-  top: 5%;
-  right: -100px;
-}
-
-.pink-orb-bottom {
-  width: 500px;
-  height: 500px;
-  background: #ff758c;
-  bottom: 10%;
-  left: -150px;
-  animation-delay: -3s;
-}
-
-@keyframes floatOrb {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, 50px) scale(1.1); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-
-/* ----------------------------- */
-/* ABOUT TEXT PANEL              */
-/* ----------------------------- */
 .reactive-about-section {
   position: relative;
   padding: 5rem 2rem 2rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   z-index: 2;
 }
 
-.glass-panel {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 1);
-  border-radius: 30px;
-  padding: 4rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+.ornate-header-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.ornate-header {
+  background: linear-gradient(to bottom, #3b1712, #240b08);
+  border: 2px solid #c79a47;
+  padding: 0.8rem 4rem;
+  border-radius: 8px;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.4),
+    inset 0 2px 5px rgba(255, 255, 255, 0.1);
+  position: relative;
   text-align: center;
 }
 
-.glass-panel h2 {
-  font-size: 2.5rem;
-  font-weight: 800; /* Extra bold for main headings */
-  color: #111827;
-  margin-bottom: 2rem;
-  letter-spacing: -0.5px; /* Tightens the text slightly for a modern look */
+.ornate-header::before,
+.ornate-header::after {
+  content: "◆";
+  color: #c79a47;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
 }
 
-.text-content p {
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.8;
-  color: #4b5563;
+.ornate-header::before {
+  left: 1.5rem;
+}
+
+.ornate-header::after {
+  right: 1.5rem;
+}
+
+.ornate-header h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #e8d099;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.intro-section {
+  display: flex;
+  align-items: stretch;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.intro-seal {
+  flex: 0 0 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-seal img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  border: 4px solid #c79a47;
+}
+
+.vertical-divider {
+  width: 2px;
+  background-color: #8b663b;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.vertical-divider::before,
+.vertical-divider::after {
+  content: "◆";
+  color: #8b663b;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+}
+
+.vertical-divider::before {
+  top: -10px;
+}
+
+.vertical-divider::after {
+  bottom: -10px;
+}
+
+.intro-text-column {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.intro-text-column p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #2b1d14;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
 
-.highlight-tag {
-  margin-top: 3rem;
-  font-size: 1.25rem !important;
-  font-weight: 500;
-  color: #ec4899 !important;
-  text-align: center !important;
+/* ----------------------------- */
+/* ROYAL INFORMATION CARDS       */
+/* ----------------------------- */
+
+.royal-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.highlight-tag strong {
+.royal-card {
+  display: flex;
+  background: linear-gradient(135deg, #2b1a13 0%, #140b07 100%);
+  border: 2px solid #a87b38;
+  border-radius: 12px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(168, 123, 56, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.royal-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(168, 123, 56, 0.3);
+}
+
+.royal-card-inner {
+  display: flex;
+  width: 100%;
+  padding: 2.5rem;
+  gap: 2.5rem;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.royal-card-text {
+  flex: 1;
+}
+
+.royal-card-text h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #dcb364;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.royal-card-text p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  color: #eaddcf;
+  line-height: 1.7;
+  margin: 0;
+  text-align: justify;
+}
+
+.club-id-tag {
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  color: #dcb364;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  border-top: 1px solid rgba(220, 179, 100, 0.3);
+  padding-top: 0.5rem;
+}
+
+.royal-card-image {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.royal-card-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+  border-radius: 6px;
+}
+
+.charter-img {
+  border: 3px solid #3b1712;
+  outline: 2px solid #a87b38;
+}
+
+/* ----------------------------- */
+/* LEADERSHIP MESSAGE CARDS      */
+/* ----------------------------- */
+
+.leaders-magazine-section {
+  max-width: 1100px;
+  margin: 2rem auto 5rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.leadership-heading {
+  text-align: center;
+  margin-bottom: -1rem;
+}
+
+.leadership-heading span {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
   font-weight: 800;
+  color: #8b663b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.magazine-card {
+  display: flex;
+  min-height: 470px;
+  background: #080808;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(220, 179, 100, 0.15), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(220, 179, 100, 0.1), transparent 30%);
+  border: 1px solid #c79a47;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(220, 179, 100, 0.12) inset;
+  position: relative;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.magazine-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 35px 70px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(199, 154, 71, 0.2);
+}
+
+.magazine-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.mag-content {
+  flex: 1;
+  padding: 3rem;
+  color: #f4e8cc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.mag-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.mag-title {
+  font-family: "Cinzel Decorative", "Cinzel", serif;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  color: #dcb364;
+  margin: 0.2rem 0 1rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-shadow:
+    0 2px 0 rgba(0, 0, 0, 0.8),
+    0 0 18px rgba(220, 179, 100, 0.35);
+}
+
+.mag-divider-star {
+  color: #dcb364;
   font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(220, 179, 100, 0.8);
+}
+
+.mag-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #d6d0c7;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.mag-quote {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #dcb364;
+  border-top: 1px solid rgba(220, 179, 100, 0.3);
+  border-bottom: 1px solid rgba(220, 179, 100, 0.3);
+  padding: 1.15rem 1.4rem;
+  margin: 1.4rem 0;
+  position: relative;
+  text-align: center;
+  background: rgba(220, 179, 100, 0.03);
+}
+
+.mag-author {
+  margin-top: 0.5rem;
+}
+
+.mag-author h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  color: #dcb364;
+  margin: 0 0 0.5rem;
+  letter-spacing: 1px;
+}
+
+.mag-author h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #aaaaaa;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.mag-image-container {
+  flex: 0 0 42%;
+  position: relative;
+  background: #080808;
+  min-height: 470px;
+}
+
+.mag-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.98;
+  filter: contrast(1.06) saturate(1.04);
 }
 
 /* ----------------------------- */
-/* TEAM SECTION                  */
+/* BOARD / AVENUE LEAD FLIP CARDS */
 /* ----------------------------- */
+
 .reactive-team-section {
   position: relative;
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
   z-index: 2;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.section-header h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #111827;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.5px;
-}
-
-.header-underline {
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #ff758c, #ff7eb3);
-  margin: 0 auto;
-  border-radius: 2px;
-}
-
 .reactive-team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
+  gap: 2.5rem;
   perspective: 1500px;
+  align-items: stretch;
 }
 
-/* ----------------------------- */
-/* 3D PROFILE CARDS              */
-/* ----------------------------- */
-.glass-profile-card {
-  display: block;
-  position: relative;
-  border-radius: 24px;
+.royal-profile-card {
+  cursor: pointer;
+  perspective: 1200px;
+  min-height: 620px;
   background: transparent;
-  transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  animation: fadeUpLight 0.8s ease-out backwards;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+  position: relative;
+  border-radius: 12px;
+  animation: boardFloat 5s ease-in-out infinite;
 }
 
-@keyframes fadeUpLight {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Pink Flow Border */
-.glass-profile-card::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: 27px;
-  background: linear-gradient(45deg, #ff758c, #ff7eb3, #ec4899, #ff758c);
-  background-size: 300%;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  animation: pinkFlow 4s linear infinite;
-}
-
-@keyframes pinkFlow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-.glass-card-inner {
-  border-radius: 24px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+.royal-profile-flipper {
+  position: relative;
+  width: 100%;
   height: 100%;
+  min-height: 620px;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.royal-profile-card.is-flipped .royal-profile-flipper {
+  transform: rotateY(180deg);
+}
+
+.royal-profile-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 620px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2b1a13 0%, #140b07 100%);
+  border: 2px solid #a87b38;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.royal-profile-front {
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.5s ease;
 }
 
-/* Photo Orientation Fixes applied here */
+.royal-profile-back {
+  transform: rotateY(180deg);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.royal-profile-back::before {
+  content: "✦";
+  font-size: 2rem;
+  color: #dcb364;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 18px rgba(220, 179, 100, 0.55);
+}
+
+.royal-profile-back .back-label {
+  font-family: "Poppins", sans-serif;
+  color: #b5a28c;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.royal-profile-back h3 {
+  font-family: "Cinzel", serif;
+  color: #dcb364;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
+}
+
+.royal-profile-back h4 {
+  font-family: "Cinzel", serif;
+  color: #eaddcf;
+  font-size: 1.15rem;
+  margin: 0 0 1.2rem;
+}
+
+.royal-profile-back p {
+  font-family: "Cormorant Garamond", serif;
+  color: #d8c7b5;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin: 0 auto 1.5rem;
+}
+
+.royal-profile-back span {
+  font-family: "Poppins", sans-serif;
+  color: #dcb364;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .profile-image-wrapper {
   position: relative;
-  aspect-ratio: 4 / 5; 
+  aspect-ratio: 4 / 5;
   width: 100%;
   overflow: hidden;
-  background-color: #f3f4f6;
+  background-color: #1a100c;
+  border-bottom: 2px solid #a87b38;
 }
 
 .profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%; 
+  object-position: center top;
+  display: block;
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Profile Text Content */
 .profile-content {
   padding: 1.5rem;
   text-align: center;
@@ -216,51 +543,374 @@
 }
 
 .profile-role {
-  font-size: 0.85rem;
-  font-weight: 700; /* Bold */
-  color: #ec4899;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #dcb364;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
 }
 
 .profile-name {
+  font-family: "Cinzel", serif;
   font-size: 1.3rem;
-  font-weight: 600; /* Semi-bold */
-  color: #111827;
+  font-weight: 700;
+  color: #eaddcf;
   margin: 0 0 1rem 0;
-  letter-spacing: -0.3px;
+  letter-spacing: 0.5px;
 }
 
 .profile-tagline {
-  font-size: 0.95rem;
-  font-weight: 300; /* Light weight for descriptions makes it look very premium */
-  color: #6b7280;
-  line-height: 1.6;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  color: #b5a28c;
+  line-height: 1.5;
   margin: 0;
 }
 
-/* ----------------------------- */
-/* CRAZY HOVER STATES            */
-/* ----------------------------- */
-
-.glass-profile-card:hover {
-  transform: translateY(-12px) rotateX(4deg) rotateY(-4deg);
+.flip-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #2b1a13;
+  background: rgba(220, 179, 100, 0.92);
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s ease;
 }
 
-.glass-profile-card:hover::before {
+.royal-profile-card:hover .flip-hint {
   opacity: 1;
+  transform: translateY(0);
 }
 
-.glass-profile-card:hover .glass-card-inner {
-  box-shadow: 20px 30px 50px rgba(236, 72, 153, 0.15);
+.royal-profile-card:hover .profile-img {
+  transform: scale(1.05);
 }
 
-.glass-profile-card:hover .profile-img {
-  transform: scale(1.08);
+.royal-profile-card:focus-visible {
+  outline: 3px solid #dcb364;
+  outline-offset: 6px;
+  border-radius: 14px;
 }
 
-.glass-profile-card:hover .profile-role {
-  color: #ff7eb3;
+@keyframes boardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ----------------------------- */
+/* RESPONSIVE                    */
+/* ----------------------------- */
+
+@media (max-width: 1024px) {
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vertical-divider {
+    width: 80%;
+    height: 2px;
+    margin: 1.5rem 0;
+  }
+
+  .vertical-divider::before {
+    left: -10px;
+    top: -5px;
+  }
+
+  .vertical-divider::after {
+    right: -10px;
+    left: auto;
+    top: -5px;
+  }
+
+  .royal-card-inner {
+    flex-direction: column;
+    padding: 2.5rem;
+  }
+
+  .royal-card-image {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .magazine-card,
+  .magazine-card.reverse {
+    flex-direction: column-reverse;
+  }
+
+  .mag-image-container {
+    height: 420px;
+    min-height: 420px;
+    flex: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page-royal {
+    padding-bottom: 3rem;
+  }
+
+  .reactive-about-section {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .ornate-header-container {
+    margin-bottom: 2.5rem;
+  }
+
+  .ornate-header {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .ornate-header::before,
+  .ornate-header::after {
+    display: none;
+  }
+
+  .ornate-header h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .intro-section {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .intro-seal {
+    flex: 0 0 160px;
+    max-width: 160px;
+  }
+
+  .intro-text-column p {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .royal-card-inner {
+    padding: 2rem 1.5rem;
+  }
+
+  .royal-card-text h3 {
+    font-size: 1.4rem;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .royal-card-text p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .club-id-tag {
+    font-size: 1rem;
+  }
+
+  .royal-card-image img {
+    max-height: 180px;
+  }
+
+  .leaders-magazine-section {
+    padding: 0 1rem;
+    gap: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .leadership-heading span {
+    font-size: 0.95rem;
+    letter-spacing: 1.4px;
+  }
+
+  .magazine-card,
+  .magazine-card.reverse {
+    flex-direction: column-reverse;
+  }
+
+  .magazine-card {
+    min-height: auto;
+    border-radius: 14px;
+  }
+
+  .mag-image-container {
+    height: auto !important;
+    min-height: auto !important;
+    flex: none;
+    background: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mag-image-container img {
+    width: 100%;
+    height: auto !important;
+    max-height: 540px;
+    object-fit: contain !important;
+    object-position: center top;
+    display: block;
+  }
+
+  .mag-content {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .mag-title {
+    font-size: 2.7rem;
+  }
+
+  .mag-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .mag-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    text-align: left;
+  }
+
+  .mag-quote {
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .mag-author h3 {
+    font-size: 1.1rem;
+  }
+
+  .mag-author h4 {
+    font-size: 0.75rem;
+  }
+
+  .reactive-team-section {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .reactive-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .royal-profile-card,
+  .royal-profile-flipper,
+  .royal-profile-face {
+    min-height: 560px;
+  }
+
+  .profile-content {
+    padding: 1rem 0.5rem;
+  }
+
+  .profile-role {
+    font-size: 0.65rem;
+  }
+
+  .profile-name {
+    font-size: 0.95rem;
+  }
+
+  .profile-tagline {
+    font-size: 0.85rem;
+  }
+
+  .flip-hint {
+    opacity: 1;
+    transform: translateY(0);
+    font-size: 0.58rem;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .royal-profile-back {
+    padding: 1.5rem 1rem;
+  }
+
+  .royal-profile-back h3 {
+    font-size: 1rem;
+  }
+
+  .royal-profile-back h4 {
+    font-size: 1rem;
+  }
+
+  .royal-profile-back p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 480px) {
+  .reactive-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-seal {
+    flex: 0 0 140px;
+    max-width: 140px;
+  }
+
+  .ornate-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .royal-card-inner {
+    padding: 1.5rem 1rem;
+  }
+
+  .mag-image-container {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .mag-image-container img {
+    width: 100%;
+    height: auto !important;
+    max-height: 520px;
+    object-fit: contain !important;
+    object-position: center top;
+  }
+
+  .mag-title {
+    font-size: 2.35rem;
+  }
+
+  .mag-subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+  }
+
+  .royal-profile-card,
+  .royal-profile-flipper,
+  .royal-profile-face {
+    min-height: 590px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .royal-card,
+  .royal-profile-card,
+  .royal-profile-flipper,
+  .profile-img,
+  .magazine-card {
+    animation: none !important;
+    transition: none !important;
+  }
 }

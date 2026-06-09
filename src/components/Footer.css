@@ -1,0 +1,125 @@
+.site-footer {
+  background: linear-gradient(135deg, #690035 0%, #8a0646 45%, #5b002d 100%);
+  color: #ffffff;
+  padding: 44px 20px 16px;
+}
+
+.footer-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1.2fr 1.2fr;
+  gap: 36px;
+}
+
+.footer-logo {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.22));
+}
+
+.footer-brand h3,
+.site-footer h4 {
+  margin: 0 0 14px;
+  font-weight: 800;
+}
+
+.footer-brand h3 {
+  font-size: 1.55rem;
+}
+
+.site-footer h4 {
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.site-footer p,
+.site-footer a {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.footer-brand p {
+  max-width: 280px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.site-footer a:hover {
+  color: #ff8cc6;
+}
+
+.footer-motto strong {
+  color: #ff67ad;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.footer-bottom {
+  max-width: 1180px;
+  margin: 30px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 38px 18px 16px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-logo,
+  .footer-socials {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-column {
+    align-items: center;
+  }
+}

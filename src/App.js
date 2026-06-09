@@ -1,5 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import Landing from "./pages/Landing";
 import About from "./pages/About";
@@ -10,9 +12,14 @@ import JoinUs from "./pages/JoinUs";
 import Parakram from "./pages/Parakram";
 import WelcomePopup from "./pages/WelcomePopup";
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+
+  const hideFooterRoutes = ["/parakram"];
+  const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
+
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <WelcomePopup />
 
@@ -25,6 +32,16 @@ function App() {
         <Route path="/join-us" element={<JoinUs />} />
         <Route path="/parakram" element={<Parakram />} />
       </Routes>
+
+      {!shouldHideFooter && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }

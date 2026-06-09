@@ -1220,3 +1220,93 @@
   .pk-sealed-grid { grid-template-columns: 1fr; }
   .pk-details-grid { grid-template-columns: 1fr; }
 }
+@media (max-width: 768px) {
+  .parakram-page,
+  .parakram-hero,
+  .parakram-section {
+    overflow-x: hidden;
+  }
+
+  .parakram-hero {
+    min-height: auto;
+    padding: 96px 18px 44px;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .parakram-hero::before,
+  .parakram-hero::after {
+    max-width: 100%;
+  }
+
+  .parakram-content,
+  .parakram-hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .parakram-content h1,
+  .parakram-hero-content h1 {
+    font-size: clamp(2.8rem, 16vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  .parakram-content h2,
+  .parakram-hero-content h2 {
+    font-size: clamp(1rem, 4.8vw, 1.35rem);
+    line-height: 1.5;
+    letter-spacing: 0.14em;
+  }
+
+  .parakram-content p,
+  .parakram-hero-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .parakram-buttons,
+  .parakram-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .parakram-buttons a,
+  .parakram-actions a,
+  .parakram-btn {
+    width: min(280px, 92vw);
+    min-height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .countdown-card,
+  .parakram-countdown {
+    width: min(92vw, 380px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .parakram-hero {
+    padding-top: 86px;
+    background-position: center top;
+  }
+
+  .parakram-content h1,
+  .parakram-hero-content h1 {
+    font-size: clamp(2.5rem, 15vw, 4rem);
+  }
+}
