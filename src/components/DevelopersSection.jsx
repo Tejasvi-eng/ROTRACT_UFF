@@ -9,7 +9,7 @@ const developers = [
   
   {
     name: "Rtr. Kaiwalya Agham",
-    role: "Project Lead and Architect",
+    role: "Project Architect and Lead",
     contribution: "Lead Developer",
     image: kaiwalyaImg,
     linkedin: "https://www.linkedin.com/in/kaiwalya-agham/",
@@ -17,8 +17,8 @@ const developers = [
   },
   {
     name: "Rtr. Tejasvi Jadhao",
-    role: "Project Manager",
-    contribution: "Assistant Developer",
+    role: "Project Manager and Co-lead",
+    contribution: "Co-Developer",
     image: tejasviImg,
     linkedin: "https://www.linkedin.com/in/tejasvi-jadhao/",
     github: "https://github.com/Tejasvi-eng",

@@ -60,13 +60,13 @@ function Events() {
       image: event5,
       link: "https://spc.rotary.org/socialMediaShare?input=JTdCJTIyaW1hZ2UlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnNwYy5yb3Rhcnkub3JnJTJGYXp1cmVJbWFnZXMlMkYxNzU3MTMyNTUyNjY5TWpJeE1qRmpZMkV0T0RZMU15MDBZbVZrTFdFMU1UTXROR016TnpnM05EQmtOMkl3MC5qcGclMjIlMkMlMjJyZWRpcmVjdFVybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGc3BjLnJvdGFyeS5vcmclMkZwcm9qZWN0JTNGZ3VpZCUzRDY2Yzc3NTQ1LTdmODgtNDFlOS04YjE3LTExNWFhODY3MTM0MyUyNmxhbmclM0RlbiUyMiUyQyUyMnRpdGxlJTIyJTNBJTIySW5kZXBlbmRlbmNlJTIwRGF5JTIwMjAyNSUyMiUyQyUyMmRlc2NyaXB0aW9uJTIyJTNBJTIyUm90YXJhY3QlMjBZQ0NFJTIwcHJvdWRseSUyMGNlbGVicmF0ZWQlMjBJbmRlcGVuZGVuY2UlMjBEYXklMjBhdCUyMEZ1dGFsYSUyMExha2UlMjB3aXRoJTIwcGF0cmlvdGlzbSUyQyUyMHVuaXR5JTIwJTI2JTIwc2VydmljZS4lMjIlN0Q=",
     },
-    {
+    /*{
       title: "Sports Fellowship",
       description:
         "Building Bonds Beyond Boundaries! Energy, enthusiasm, and endless smiles filled the day.",
       image: event6,
       link: "https://spc.rotary.org/socialMediaShare?input=JTdCJTIyaW1hZ2UlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnNwYy5yb3Rhcnkub3JnJTJGYXp1cmVJbWFnZXMlMkYxNzcwNDk2ODA2MTA2WkdFM05qRmxaalF0TmpjNE15MDBaVFpoTFdFMk9EZ3RPREF4WkdWbVlUZzNOV1F6MC5qcGVnJTIyJTJDJTIycmVkaXJlY3RVcmwlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnNwYy5yb3Rhcnkub3JnJTJGcHJvamVjdCUzRmd1aWQlM0QxNDFkODgxZi01ZTUwLTQwY2ItODEwNi1lM2JjZmUzYzc3MTAlMjZsYW5nJTNEZW4lMjIlMkMlMjJ0aXRsZSUyMiUzQSUyMlNwb3J0cyUyMEZlbGxvd3NoaXAlMjIlMkMlMjJkZXNjcmlwdGlvbiUyMiUzQSUyMkElMjBzcG9ydHMlMjBmZWxsb3dzaGlwJTIwZXZlbnQlMjBwcm9tb3RpbmclMjBib25kaW5nJTJDJTIwdGVhbXdvcmslMkMlMjBhbmQlMjB3ZWxsLWJlaW5nJTIwYW1vbmclMjBSb3RhcmFjdCUyMG1lbWJlcnMuJTIyJTdE",
-    },
+    },*/
     {
       title: "Azadi Ka Safar",
       description:
@@ -145,14 +145,14 @@ function Events() {
       link: "https://spc.rotary.org/socialMediaShare?input=JTdCJTIyaW1hZ2UlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnNwYy5yb3Rhcnkub3JnJTJGYXp1cmVJbWFnZXMlMkYxNzY3MTcxMzg3ODcyWkdFM05qRmxaalF0TmpjNE15MDBaVFpoTFdFMk9EZ3RPREF4WkdWbVlUZzNOV1F6MC5qcGVnJTIyJTJDJTIycmVkaXJlY3RVcmwlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnNwYy5yb3Rhcnkub3JnJTJGcHJvamVjdCUzRmd1aWQlM0Q0OTg1Yjc5Ny0yN2IxLTRhZWItYWY0Ny1jNWQxMjhkNGRiMGYlMjZsYW5nJTNEZW4lMjIlMkMlMjJ0aXRsZSUyMiUzQSUyMiVFMCVBNCVBRSVFMCVBNCVCRSVFMCVBNCVBRiVFMCVBNSU4NyVFMCVBNCU5QSVFMCVBNSU4MCUyMCVFMCVBNCU5QSVFMCVBNCVCRSVFMCVBNCVBNiVFMCVBNCVCMCUyMCVFMiU4MCU5MyUyMFBoYXNlJTIwMSUyMiUyQyUyMmRlc2NyaXB0aW9uJTIyJTNBJTIyRGlzdHJpYnV0aW9uJTIwb2YlMjBiZWRzaGVldHMlMjBhbmQlMjBlbW90aW9uYWwlMjBzdXBwb3J0JTIwdG8lMjBob21lbGVzcyUyMGluZGl2aWR1YWxzJTIwYXQlMjBhbiUyMHVyYmFuJTIwc2hlbHRlci4lMjIlN0Q=",
     },
     {
-      title: "SANITARY DONATION DRIVE",
+      title: "Stationery Donation Drive",
       description:
         "Providing underprivileged women and girls with essential hygiene products.",
       image: event18,
       link: "#",
     },
     {
-      title: "Anna Dhanam",
+      title: "Anna Danam",
       description: "A noble act of feeding the hungry with compassion and service.",
       image: event19,
       link: "#",
