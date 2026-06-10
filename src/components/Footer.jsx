@@ -1,5 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaGlobe,
+} from "react-icons/fa";
+
 import "./Footer.css";
 import logo from "../assets/logo.png";
 
@@ -18,9 +28,32 @@ function Footer() {
           </p>
 
           <div className="footer-socials">
-            <a href="https://www.instagram.com/rotaractycce/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
-            <a href="https://www.linkedin.com/company/rotaract-club-of-ycce/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-            <a href="https://www.youtube.com/@rotaractclubofycce3030" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+            <a
+              href="https://www.instagram.com/rotaract_ycce/profilecard/?igsh=MW85bTlybHh1YW83MA%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <FaYoutube />
+            </a>
           </div>
         </div>
 
@@ -35,19 +68,37 @@ function Footer() {
 
         <div className="footer-column">
           <h4>Connect</h4>
-          <p>⌖ YCCE, Nagpur</p>
-          <p>✉ rotaractycce@gmail.com</p>
-          <p>☏ +91 9096547214</p>
-          <p>◎ rotaractycce.com</p>
+
+          <ul className="footer-contact">
+            <li>
+              <FaMapMarkerAlt />
+              <span>YCCE, Nagpur</span>
+            </li>
+
+            <li>
+              <FaEnvelope />
+              <span>rotaractycce@gmail.com</span>
+            </li>
+
+            <li>
+              <FaPhoneAlt />
+              <span>+91 9096547214</span>
+            </li>
+
+            <li>
+              <FaInstagram />
+              <span>@rotaractycce</span>
+            </li>
+
+            <li>
+              <FaGlobe />
+              <span>rotaractycce.com</span>
+            </li>
+          </ul>
         </div>
 
         <div className="footer-column footer-motto">
           <h4>Our Motto</h4>
-          <p>
-            Together We Rise —<br />
-            One Initiative, One Idea,<br />
-            One Impact at a Time.
-          </p>
           <strong>#ActToImpact</strong>
         </div>
       </div>

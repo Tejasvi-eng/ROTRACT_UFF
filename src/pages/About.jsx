@@ -11,16 +11,16 @@ import charter from "../assets/charter.jpeg";
 /* Team Images */
 import president from "../assets/team/president.jpg";
 import vicePresident from "../assets/team/vice-president.jpg";
-import secretary from "../assets/team/general-secretary.jpg";
+import secretary from "../assets/team/general-secretary.jpeg";
 import treasurer from "../assets/team/treasurer.jpg";
-import international from "../assets/team/international.jpg";
+import international from "../assets/team/international.jpeg";
 import professional from "../assets/team/professional.jpeg";
 import clubService from "../assets/team/club-service.jpg";
 import communityMedical from "../assets/team/community-medical.jpg";
 import communityNonMedical from "../assets/team/community-non-medical.jpg";
 import foundation from "../assets/team/foundation.jpg";
 import publicImage from "../assets/team/public-image.jpg";
-import membership from "../assets/team/membership.jpg";
+import membership from "../assets/team/membership.jpeg";
 
 function About() {
   const [flippedCard, setFlippedCard] = useState(null);
@@ -271,15 +271,15 @@ function About() {
             <div className="mag-divider-star">✦</div>
 
             <p>
-             As President of the Rotaract Club of YCCE, I believe that real growth begins when we challenge conventional thinking and step beyond our comfort zones. Throughout our tenure, one of the greatest challenges has been dealing with rejection—whether while seeking opportunities, building collaborations, or introducing new initiatives. However, every setback has strengthened our determination and taught us valuable lessons in resilience and leadership.
+             As President of the Rotaract Club of YCCE, I believe real growth begins when we step beyond comfort zones and challenge conventional thinking. This tenure has taught us to face rejection, setbacks, and uncertainty with resilience, teamwork, and a stronger will to create impact.
 
             </p>
 
             <p>
-              I strongly believe in doing things differently, embracing innovation, and creating meaningful impact through action. Our focus has always been on empowering young leaders, serving the community, and fostering a culture of teamwork, learning, and continuous improvement.
+              Our focus has always been to do things differently, empower young leaders, serve the community, and turn ideas into meaningful action. None of this would be possible without our passionate members, who continue to transform vision into reality.
             </p>
             <p>
-              None of this would be possible without the dedication and passion of our members, who consistently turn ideas into reality. As we move forward, we remain committed to inspiring positive change, creating opportunities for growth, and leaving behind a legacy of service, leadership, and lasting impact.
+             As we move forward, we remain committed to building opportunities, inspiring positive change, and leaving behind a legacy of service, leadership, and lasting impact.
             </p>
 
             <blockquote className="mag-quote">
@@ -305,33 +305,46 @@ function About() {
 
         <div className="magazine-card reverse">
           <div className="mag-content">
-            <h4 className="mag-subtitle">FROM THE</h4>
-            <h2 className="mag-title">Secretary</h2>
-            <div className="mag-divider-star">✦</div>
+          <h4 className="mag-subtitle">FROM THE</h4>
+          <h2 className="mag-title">Secretary</h2>
+          <div className="mag-divider-star">✦</div>
 
-            <p>
-             I am Rtr. Soham Nerkar, and being a part of the Rotaract Club of YCCE has always felt like being part of a family rather than just a club. Serving as General Secretary for the tenure 2025–26 was a transformative journey filled with challenges, learning, and unforgettable memories. Taking on the responsibility midway through the tenure pushed me beyond my comfort zone and taught me the importance of adaptability, teamwork, and perseverance.
-            </p>
+          <p>
+            I am Rtr. Soham Nerkar, and Rotaract Club of YCCE has always felt like
+            a family to me. Serving as General Secretary for 2025–26 has been a
+            transformative journey filled with challenges, learning, and unforgettable
+            memories.
+          </p>
 
-            <p>
-             My vision was to contribute towards building a stronger, more connected, and future-ready club while creating systems and initiatives that would continue to benefit future generations of Rotaractors. None of this would have been possible without the unwavering support of my team, members, and especially our President, Rtr. Vansh Khojre, who believed in me even when I doubted myself. Rotaract transformed me from someone who preferred staying in the background into a person confident enough to take responsibility, serve others, and grow every day.
-            </p>
+          <p>
+            Taking responsibility midway through the tenure pushed me beyond my comfort
+            zone and taught me adaptability, teamwork, and perseverance. My vision was
+            to help build a stronger, more connected, and future-ready club through
+            systems and initiatives that continue to benefit future Rotaractors.
+          </p>
 
-            <blockquote className="mag-quote">
-              Administrative excellence is not a background task;
+          <p>
+            I am grateful to my team, members, and especially our President, Rtr. Vansh
+            Khojre, for their trust and support. Rotaract helped me grow from someone
+            who stayed in the background into someone ready to take responsibility and
+            serve with confidence.
+          </p>
+
+          <blockquote className="mag-quote">
+            Administrative excellence is not a background task;
+            <br />
+            it is the stage upon which leadership performs.
+          </blockquote>
+
+          <div className="mag-author">
+            <h3>RTR. SOHAM NERKAR</h3>
+            <h4>
+              GENERAL SECRETARY
               <br />
-              it is the stage upon which leadership performs.
-            </blockquote>
-
-            <div className="mag-author">
-              <h3>RTR. SOHAM NERKAR</h3>
-              <h4>
-                GENERAL SECRETARY
-                <br />
-                2025-26
-              </h4>
-            </div>
+              2025-26
+            </h4>
           </div>
+        </div>
 
           <div className="mag-image-container">
             <img

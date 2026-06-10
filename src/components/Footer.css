@@ -2,6 +2,7 @@
   background: linear-gradient(135deg, #690035 0%, #8a0646 45%, #5b002d 100%);
   color: #ffffff;
   padding: 44px 20px 16px;
+  overflow-x: hidden;
 }
 
 .footer-container {
@@ -50,19 +51,29 @@
 
 .footer-socials {
   display: flex;
-  gap: 14px;
-  margin-top: 20px;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
 }
 
 .footer-socials a {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
-  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer-socials a:hover {
+  background: #ffffff;
+  color: #9d004d;
+  transform: translateY(-3px);
 }
 
 .footer-column {
@@ -73,6 +84,42 @@
 
 .site-footer a:hover {
   color: #ff8cc6;
+}
+
+.footer-contact {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 1.2rem 0 0 !important;
+}
+
+.footer-contact li {
+  list-style: none !important;
+  display: grid;
+  grid-template-columns: 20px auto;
+  align-items: center;
+  column-gap: 0.65rem;
+  margin: 0 0 0.85rem 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.footer-contact li::marker {
+  content: "" !important;
+  font-size: 0 !important;
+}
+
+.footer-contact svg {
+  width: 18px;
+  min-width: 18px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.footer-contact span {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .footer-motto strong {
@@ -121,5 +168,29 @@
 
   .footer-column {
     align-items: center;
+  }
+
+  .footer-contact {
+    width: max-content;
+    max-width: 100%;
+    margin: 1rem auto 0 !important;
+  }
+
+  .footer-contact li {
+    grid-template-columns: 20px auto;
+    justify-content: start;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  .footer-contact span {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-contact li {
+    font-size: 0.9rem;
+    column-gap: 0.55rem;
   }
 }

@@ -45,7 +45,7 @@ export default function Parakram() {
     { label: "District",   value: "3030" },
     { label: "DRR",        value: "Rtr. Raghav Pagar" },
     { label: "Team",       value: "Elevate Together" },
-    { label: "Host Club",  value: "RC YCCE" },
+    { label: "Host Club",  value: "RAC YCCE" },
     { label: "Date",       value: "28.06.2026" },
   ], []);
 
@@ -237,7 +237,7 @@ export default function Parakram() {
               administration.
             </p>
             <blockquote className="pk-blockquote">
-              "Honouring Service. Celebrating Leadership. Crowning Impact. A night where excellence is
+              "Honouring Service. Celebrating Leadership. Crowning Impact. A day where excellence is
               etched into the history of District 3030."
             </blockquote>
           </div>

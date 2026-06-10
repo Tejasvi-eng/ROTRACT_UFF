@@ -12,7 +12,7 @@ const developers = [
     role: "Project Architect and Lead",
     contribution: "Lead Developer",
     image: kaiwalyaImg,
-    linkedin: "https://www.linkedin.com/in/kaiwalya-agham/",
+    linkedin: "",
     github: "https://github.com/hp709101",
   },
   {

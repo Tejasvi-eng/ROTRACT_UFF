@@ -914,3 +914,79 @@
     transition: none !important;
   }
 }
+/* Fix mirrored flip hint on BOD card back side */
+.royal-profile-card.is-flipped .flip-hint {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  display: none !important;
+}
+/* FINAL MOBILE FLIP CARD FIX */
+
+/* Make 3D flip stable across mobile browsers */
+.royal-profile-card {
+  perspective: 1200px;
+}
+
+.royal-profile-flipper {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.royal-profile-face {
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+}
+
+/* Front stays normal */
+.royal-profile-front {
+  transform: rotateY(0deg);
+}
+
+/* Back is flipped correctly */
+.royal-profile-back {
+  transform: rotateY(180deg);
+}
+
+/* Flip only the flipper, not inner content separately */
+.royal-profile-card.is-flipped .royal-profile-flipper {
+  transform: rotateY(180deg);
+}
+
+/* The tap hint should NEVER appear on the back side */
+.royal-profile-card.is-flipped .flip-hint,
+.royal-profile-back .flip-hint {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Keep hint only on front side */
+.royal-profile-front .flip-hint {
+  display: inline-flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile-specific cleanup */
+@media (max-width: 768px) {
+  .royal-profile-card,
+  .royal-profile-flipper,
+  .royal-profile-face {
+    min-height: 590px;
+  }
+
+  .royal-profile-back {
+    padding: 1.5rem 1rem;
+  }
+
+  .royal-profile-back p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .royal-profile-card.is-flipped .flip-hint {
+    display: none !important;
+  }
+}
