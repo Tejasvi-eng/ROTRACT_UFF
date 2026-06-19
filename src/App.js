@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -41,9 +41,9 @@ function AppContent() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppContent />
     </BrowserRouter>
   );
 }
-
 export default App;

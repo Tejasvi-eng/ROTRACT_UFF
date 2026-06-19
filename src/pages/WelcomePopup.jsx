@@ -51,7 +51,7 @@ function WelcomePopup() {
           </p>
 
           <a
-            href="PASTE_REGISTRATION_LINK_HERE"
+            href="https://forms.gle/dfbDcVp2QZboSjNr6"
             target="_blank"
             rel="noreferrer"
             className="popup-btn primary"

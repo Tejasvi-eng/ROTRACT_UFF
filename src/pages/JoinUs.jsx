@@ -6,7 +6,7 @@ function Join() {
       <HeroBanner
         title="Become a Rotaractor"
         subtitle="Serve • Lead • Connect"
-        videoSrc="/videos/join.mp4"
+        videoSrc="/videos/about.mp4"
         buttonText="Fill Membership Form"
         buttonLink="https://forms.gle/WTx5Mwv4HCkWhYaw7"
       />

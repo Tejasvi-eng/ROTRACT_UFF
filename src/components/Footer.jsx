@@ -1,4 +1,5 @@
 import React from "react";
+import { FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import {
   FaInstagram,
@@ -28,33 +29,50 @@ function Footer() {
           </p>
 
           <div className="footer-socials">
-            <a
-              href="https://www.instagram.com/rotaract_ycce/profilecard/?igsh=MW85bTlybHh1YW83MA%3D%3D"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
 
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn />
-            </a>
+          <a
+            href="https://www.instagram.com/rotaract_ycce/profilecard/?igsh=MW85bTlybHh1YW83MA=="
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </a>
 
-            <a
-              href="https://www.youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <FaYoutube />
-            </a>
-          </div>
+          <a
+            href="http://linkedin.com/company/rotaract-club-of-ycce"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedinIn />
+          </a>
+
+          <a
+            href="https://www.youtube.com/@rotaractclubofycce3030"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <FaYoutube />
+          </a>
+          <a
+            href="https://whatsapp.com/channel/0029VamW8VY7tkj86XfX0z1A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp />
+          </a>
+
+          <a
+            href="https://x.com/RACYCCE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaXTwitter />
+          </a>
+
+        </div>
         </div>
 
         <div className="footer-column">
@@ -67,35 +85,59 @@ function Footer() {
         </div>
 
         <div className="footer-column">
-          <h4>Connect</h4>
+        <h4>Connect</h4>
 
-          <ul className="footer-contact">
-            <li>
-              <FaMapMarkerAlt />
-              <span>YCCE, Nagpur</span>
-            </li>
+        <ul className="footer-contact">
 
-            <li>
-              <FaEnvelope />
-              <span>rotaractycce@gmail.com</span>
-            </li>
+          <li>
+            <FaMapMarkerAlt />
+            <a
+              href="https://maps.google.com/?q=Yeshwantrao+Chavan+College+of+Engineering+Nagpur"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YCCE, Nagpur
+            </a>
+          </li>
 
-            <li>
-              <FaPhoneAlt />
-              <span>+91 9096547214</span>
-            </li>
+          <li>
+            <FaEnvelope />
+            <a href="mailto:rotaractycce@gmail.com">
+              rotaractycce@gmail.com
+            </a>
+          </li>
 
-            <li>
-              <FaInstagram />
-              <span>@rotaractycce</span>
-            </li>
+          <li>
+            <FaPhoneAlt />
+            <a href="tel:+919096547214">
+              +91 9096547214
+            </a>
+          </li>
 
-            <li>
-              <FaGlobe />
-              <span>rotaractycce.com</span>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <FaInstagram />
+            <a
+              href="https://www.instagram.com/rotaract_ycce/profilecard/?igsh=MW85bTlybHh1YW83MA=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @rotaract_ycce
+            </a>
+          </li>
+
+          <li>
+            <FaGlobe />
+            <a
+              href="https://rotaractycce.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              rotaractycce.com
+            </a>
+          </li>
+
+        </ul>
+      </div>
 
         <div className="footer-column footer-motto">
           <h4>Our Motto</h4>

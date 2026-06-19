@@ -260,3 +260,26 @@
     transition: none !important;
   }
 }
+/* Final popup poster spacing fix */
+.popup-image-wrap {
+  padding: 20px !important;
+}
+
+.popup-image {
+  width: auto;
+  max-width: 100%;
+  max-height: 390px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (max-width: 820px) {
+  .popup-image-wrap {
+    padding: 16px !important;
+  }
+
+  .popup-image {
+    max-height: 260px;
+  }
+}
